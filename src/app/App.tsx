@@ -211,10 +211,10 @@ export function App({
       <footer>
         <p className="footer-note">輸出為通用外形，不包含雷射功率或速度。正式製作前請先試切。</p>
         <nav className="project-links" aria-label="相關專案">
-          <a href="https://github.com/YuenHK/ShapeCut" target="_blank" rel="noreferrer">
+          <a href="https://github.com/wcyhk/ShapeCut" target="_blank" rel="noreferrer">
             GitHub 專案介紹
           </a>
-          <a href="https://yuenhk.github.io/Bayblad-Simulator/" target="_blank" rel="noreferrer">
+          <a href="https://wcy.hk/Bayblad-Simulator/" target="_blank" rel="noreferrer">
             延伸體驗：陀螺對戰模擬器
           </a>
         </nav>

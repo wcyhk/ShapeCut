@@ -2,7 +2,7 @@
 
 > **面向 AI 代理的工作者：** 必需子技能：使用 superpowers:subagent-driven-development（推薦）或 superpowers:executing-plans 逐任務實現此計劃。步驟使用復選框（`- [ ]`）語法來跟蹤進度。
 
-**目標：** 把 ShapeCut 連同兩個已授權 STL 範例發佈到 `YuenHK/ShapeCut`，由 GitHub Actions 自動部署至 `https://yuenhk.github.io/ShapeCut/`。
+**目標：** 把 ShapeCut 連同兩個已授權 STL 範例發佈到 `YuenHK/ShapeCut`，由 GitHub Actions 自動部署至 `https://wcy.hk/ShapeCut/`。
 
 **架構：** Vite 只在 Pages build 使用 `/ShapeCut/` base，本機開發保持 `/`。範例模型放在 `public/samples/`，由一個小型資料模組產生 base-aware 下載 URL；GitHub 官方 Pages Actions 只在 typecheck 與 build 通過後部署 `dist/`。
 
@@ -302,7 +302,7 @@ jobs:
 ```markdown
 ## 公開網站與範例
 
-ShapeCut 網站：<https://yuenhk.github.io/ShapeCut/>
+ShapeCut 網站：<https://wcy.hk/ShapeCut/>
 
 首頁提供 `sample1.stl` 和 `sample2.stl` 下載。範例只供測試工作流程；實際切割前仍須自行檢查尺寸、材料、刀縫與結構安全。使用者選取的 STL 只在瀏覽器本機處理，不會上載到 GitHub Pages。
 
@@ -398,13 +398,13 @@ git commit -m "docs: record GitHub Pages verification"
 建立 `YuenHK/ShapeCut`，可見性選 Public；不要由 GitHub 初始化 README、`.gitignore` 或 license，避免與本機歷史衝突。建立後核對 canonical URL：
 
 ```text
-https://github.com/YuenHK/ShapeCut
+https://github.com/wcyhk/ShapeCut
 ```
 
 - [x] **步驟 3：加入並核對 remote**
 
 ```bash
-git remote add origin https://github.com/YuenHK/ShapeCut.git
+git remote add origin https://github.com/wcyhk/ShapeCut.git
 git remote -v
 ```
 
@@ -427,7 +427,7 @@ git push -u origin main
 
 ### 任務 7：公開部署驗收
 
-**網址：** `https://yuenhk.github.io/ShapeCut/`
+**網址：** `https://wcy.hk/ShapeCut/`
 
 - [x] **步驟 1：等待 workflow 得出終態**
 
@@ -436,9 +436,9 @@ git push -u origin main
 - [x] **步驟 2：驗證公開資源**
 
 ```bash
-curl -fsSIL https://yuenhk.github.io/ShapeCut/
-curl -fsSL https://yuenhk.github.io/ShapeCut/samples/sample1.stl | shasum -a 256
-curl -fsSL https://yuenhk.github.io/ShapeCut/samples/sample2.stl | shasum -a 256
+curl -fsSIL https://wcy.hk/ShapeCut/
+curl -fsSL https://wcy.hk/ShapeCut/samples/sample1.stl | shasum -a 256
+curl -fsSL https://wcy.hk/ShapeCut/samples/sample2.stl | shasum -a 256
 ```
 
 預期：首頁 HTTP 成功；兩個遠端 SHA-256 分別為：
@@ -458,10 +458,10 @@ curl -fsSL https://yuenhk.github.io/ShapeCut/samples/sample2.stl | shasum -a 256
 
 ## 實際公開部署結果（2026-08-04）
 
-- 使用者已批准建立公開 repository、加入 remote、推送 `main`、啟用 Pages 及首次部署；公開 repository 已建立於 `https://github.com/YuenHK/ShapeCut`。
+- 使用者已批准建立公開 repository、加入 remote、推送 `main`、啟用 Pages 及首次部署；公開 repository 已建立於 `https://github.com/wcyhk/ShapeCut`。
 - 本機以只限 `YuenHK/ShapeCut` 的 Ed25519 deploy key 推送；GitHub 顯示該 key 為 Read/write。`main` 已成功推送並追蹤 `origin/main`，推送時的 HEAD 為 `24c9b0532e522e174d5e760c5eced1d93ef1c004`。
 - Settings → Pages 的 Source 已設為 GitHub Actions。首次 workflow `Deploy ShapeCut to GitHub Pages` run `30897225833` 的 `build` 與 `deploy` jobs 均為 `completed / success`。
-- `https://yuenhk.github.io/ShapeCut/` 回應 HTTP 200；production HTML 的 JS、module preload、CSS 及 manifest 均使用 `/ShapeCut/` base path。
+- `https://wcy.hk/ShapeCut/` 回應 HTTP 200；production HTML 的 JS、module preload、CSS 及 manifest 均使用 `/ShapeCut/` base path。
 - 遠端 `sample1.stl`：2005084 bytes，SHA-256 `17269a09c5a56b3c2e62683836781126421e30bfb9dce5599ff8f53667808b4d`。
 - 遠端 `sample2.stl`：1855884 bytes，SHA-256 `96d0ddd32cc660af31bedf4fb52552d54505169efb7887862bd9943c4f73d5b6`。
 - Chrome 正式頁面顯示首頁、兩個 `/ShapeCut/samples/...` 下載連結，console 為空。Chrome 擴充功能未啟用 file URL access，故檔案選擇器由同機受控 Chromium 補驗：正式網址成功選取 `sample1.stl` 並到達「選擇製作材料」畫面，page console/pageerror 均為空。

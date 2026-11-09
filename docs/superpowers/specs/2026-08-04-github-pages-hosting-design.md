@@ -7,7 +7,7 @@
 
 把現有 ShapeCut Vite 網頁工具放到公開 GitHub repository `ShapeCut`，使用 GitHub Actions 自動部署至 GitHub Pages。公開網站使用 GitHub Pages 預設專案網址：
 
-`https://yuenhk.github.io/ShapeCut/`
+`https://wcy.hk/ShapeCut/`
 
 同時公開兩個已獲授權分享的 STL 範例，讓使用者可從網站下載並測試 ShapeCut 工作流程。
 

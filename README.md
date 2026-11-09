@@ -6,9 +6,9 @@ STL 幾何運算在使用者瀏覽器內完成，不會上載到 ShapeCut 後端
 
 ## 線上測試
 
-- [ShapeCut 公開工具](https://yuenhk.github.io/ShapeCut/)
-- [sample1.stl](https://yuenhk.github.io/ShapeCut/samples/sample1.stl)
-- [sample2.stl](https://yuenhk.github.io/ShapeCut/samples/sample2.stl)
+- [ShapeCut 公開工具](https://wcy.hk/ShapeCut/)
+- [sample1.stl](https://wcy.hk/ShapeCut/samples/sample1.stl)
+- [sample2.stl](https://wcy.hk/ShapeCut/samples/sample2.stl)
 
 範例只供測試工作流程，不代表已通過實體切割或官方發射器驗收。
 
@@ -221,7 +221,7 @@ SHAPECUT_BASE_PATH=/ShapeCut/ npm run build
 需要 Node.js 20 或以上；CI 使用 Node.js 24。
 
 ```bash
-git clone https://github.com/YuenHK/ShapeCut.git
+git clone https://github.com/wcyhk/ShapeCut.git
 cd ShapeCut
 npm ci
 npm run dev

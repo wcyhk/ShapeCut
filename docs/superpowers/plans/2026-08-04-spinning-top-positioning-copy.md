@@ -151,7 +151,7 @@ git commit -m "docs: align ShapeCut spinning-top positioning"
 
 **Files:**
 - Modify: `docs/superpowers/plans/2026-08-04-spinning-top-positioning-copy.md`
-- External: `https://github.com/YuenHK/ShapeCut/settings`
+- External: `https://github.com/wcyhk/ShapeCut/settings`
 
 **Interfaces:**
 - Consumes: approved GitHub account access, existing `origin`, Pages workflow and exact repository description from the design.
@@ -217,8 +217,8 @@ Expected: remote `main` advances to local HEAD; the resulting `Deploy ShapeCut t
 - [x] **Step 5: Verify the public deployment**
 
 ```bash
-curl -fsSL https://yuenhk.github.io/ShapeCut/ | rg -F 'ShapeCut｜3D 陀螺模型轉 Laser Cut 切片'
-curl -fsSL https://yuenhk.github.io/ShapeCut/manifest.webmanifest | \
+curl -fsSL https://wcy.hk/ShapeCut/ | rg -F 'ShapeCut｜3D 陀螺模型轉 Laser Cut 切片'
+curl -fsSL https://wcy.hk/ShapeCut/manifest.webmanifest | \
   jq -e '.description == "把 3D 陀螺 STL 模型轉換成 Laser Cut 平面切片及製作檔案的瀏覽器工具。"'
 ```
 

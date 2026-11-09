@@ -68,4 +68,4 @@
 
 - [ ] **步驟 3：公開驗收**
 
-等待 GitHub Pages 部署完成，檢查 `https://yuenhk.github.io/ShapeCut/` 回傳 HTTP 200，且公開 DOM 含有兩個正確連結。
+等待 GitHub Pages 部署完成，檢查 `https://wcy.hk/ShapeCut/` 回傳 HTTP 200，且公開 DOM 含有兩個正確連結。

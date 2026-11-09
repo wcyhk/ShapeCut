@@ -87,8 +87,8 @@ describe('App', () => {
 
     const github = await screen.findByRole('link', { name: 'GitHub 專案介紹' });
     const simulator = screen.getByRole('link', { name: '延伸體驗：陀螺對戰模擬器' });
-    expect(github).toHaveAttribute('href', 'https://github.com/YuenHK/ShapeCut');
-    expect(simulator).toHaveAttribute('href', 'https://yuenhk.github.io/Bayblad-Simulator/');
+    expect(github).toHaveAttribute('href', 'https://github.com/wcyhk/ShapeCut');
+    expect(simulator).toHaveAttribute('href', 'https://wcy.hk/Bayblad-Simulator/');
     for (const link of [github, simulator]) {
       expect(link).toHaveAttribute('target', '_blank');
       expect(link).toHaveAttribute('rel', 'noreferrer');

@@ -7,8 +7,8 @@
 ## 已確認設計
 
 - 在現有頁尾安全提示下加入精簡的「相關連結」導覽。
-- 提供「GitHub 專案介紹」，連到 `https://github.com/YuenHK/ShapeCut`。
-- 提供「延伸體驗：陀螺對戰模擬器」，連到 `https://yuenhk.github.io/Bayblad-Simulator/`。
+- 提供「GitHub 專案介紹」，連到 `https://github.com/wcyhk/ShapeCut`。
+- 提供「延伸體驗：陀螺對戰模擬器」，連到 `https://wcy.hk/Bayblad-Simulator/`。
 - 兩個連結均在新分頁開啟，使用 `rel="noreferrer"`，並保留清晰的可見文字。
 - 桌面版橫向排列；空間不足時自動換行，避免產生水平溢出。
 - 保留現有安全提示、字體、字級與藍白配色，不加入新的大型宣傳卡或頂部按鈕。
